@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PostsApi.Services\PostApi.Services.csproj" />
+    <ProjectReference Include="..\PostApi.Services\PostApi.Services.csproj" />
   </ItemGroup>
 
 </Project>

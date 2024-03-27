@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostApi", "PostsApi\PostApi.csproj", "{F43A12B2-CB09-4191-8AD8-4BAD01328CCA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostApi", "PostApi\PostApi.csproj", "{F43A12B2-CB09-4191-8AD8-4BAD01328CCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostApi.Models", "PostsApi.Models\PostApi.Models.csproj", "{1AE017E7-A1DA-4AF2-BFCE-F331706B96CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostApi.Models", "PostApi.Models\PostApi.Models.csproj", "{1AE017E7-A1DA-4AF2-BFCE-F331706B96CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostApi.Services", "PostsApi.Services\PostApi.Services.csproj", "{EC86FEAE-A9ED-40CD-B0C5-9E342662CECF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostApi.Services", "PostApi.Services\PostApi.Services.csproj", "{EC86FEAE-A9ED-40CD-B0C5-9E342662CECF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostApi.DataAccess", "PostsApi.DataAccess\PostApi.DataAccess.csproj", "{9A138007-97DB-49AE-BF21-B60F6B30E041}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostApi.DataAccess", "PostApi.DataAccess\PostApi.DataAccess.csproj", "{9A138007-97DB-49AE-BF21-B60F6B30E041}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

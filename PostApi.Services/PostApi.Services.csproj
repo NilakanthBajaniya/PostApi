@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PostsApi.DataAccess\PostApi.DataAccess.csproj" />
-    <ProjectReference Include="..\PostsApi.Models\PostApi.Models.csproj" />
+    <ProjectReference Include="..\PostApi.DataAccess\PostApi.DataAccess.csproj" />
+    <ProjectReference Include="..\PostApi.Models\PostApi.Models.csproj" />
   </ItemGroup>
 
 </Project>
