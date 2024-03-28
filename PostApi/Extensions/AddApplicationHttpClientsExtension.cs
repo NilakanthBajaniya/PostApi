@@ -14,7 +14,7 @@ namespace PostApi.Extensions
 
                 if (string.IsNullOrEmpty(postApiUrl))
                 {
-                    throw new ApplicationException("PostApiUrl is not set in settings");
+                    throw new Exception("PostApiUrl is not set in settings");
                 }
 
                 client.BaseAddress = new Uri(postApiUrl);
