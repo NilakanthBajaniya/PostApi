@@ -1,4 +1,5 @@
-﻿using PostApi.HttpClients;
+﻿using PostApi.DataAccess.Interfaces;
+using PostApi.HttpClients;
 
 namespace PostApi.Extensions
 {
@@ -7,9 +8,9 @@ namespace PostApi.Extensions
 
         public static IServiceCollection AddApplicationHttpClients(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddHttpClient<PostApiClient>((serviceProvider, client) =>
+            services.AddHttpClient<IPostApiClient, PostApiClient>((serviceProvider, client) =>
             {
-                string postApiUrl = configuration.GetSection("PostApiUrl").Value;
+                string? postApiUrl = configuration.GetSection("PostApiUrl").Value;
 
                 if (string.IsNullOrEmpty(postApiUrl))
                 {

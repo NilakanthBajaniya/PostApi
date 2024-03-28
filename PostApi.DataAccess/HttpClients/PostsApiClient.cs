@@ -1,10 +1,11 @@
-﻿using PostApi.Models;
+﻿using PostApi.DataAccess.Interfaces;
+using PostApi.Models;
 using PostApi.Models.DTOs;
 using System.Net.Http.Json;
 
 namespace PostApi.HttpClients
 {
-    public class PostApiClient
+    public class PostApiClient : IPostApiClient
     {
         private readonly HttpClient _httpClient;
         private readonly PostApiResponseDTO _emptyPostApiResponseDTO;

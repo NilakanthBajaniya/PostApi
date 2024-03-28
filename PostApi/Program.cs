@@ -10,6 +10,8 @@ builder.Services.AddApplicationHttpClients(builder.Configuration);
 
 var app = builder.Build();
 
+app.UseApplicationCors();
+
 // Configure the HTTP request pipeline.
 app.UseHttpsRedirection();
 

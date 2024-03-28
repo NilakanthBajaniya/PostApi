@@ -1,6 +1,4 @@
-﻿using PostApi.Models;
-
-namespace PostApi.Models.DTOs
+﻿namespace PostApi.Models.DTOs
 {
     public class PostApiResponseDTO
     {

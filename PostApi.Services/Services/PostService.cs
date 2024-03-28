@@ -1,21 +1,11 @@
-﻿using PostApi.HttpClients;
-using PostApi.Models;
+﻿using PostApi.Models;
 using PostApi.Services.Interfaces;
 using PostApi.Services.Utils;
 using PostApi.Models.DTOs;
-using System.ComponentModel;
-using System.Xml.Linq;
+using PostApi.DataAccess.Interfaces;
 
 namespace PostApi.Services
 {
-    public enum SortField
-    {
-        Id,
-        Reads,
-        Likes,
-        Popularity
-    }
-
     public static class PostSortFields
     {
         public const string Id = "id";
@@ -26,12 +16,11 @@ namespace PostApi.Services
 
     public class PostService : IPostService
     {
-        private readonly PostApiClient _apiClient;
-        public PostService(PostApiClient apiClient)
+        private readonly IPostApiClient _apiClient;
+        public PostService(IPostApiClient apiClient)
         {
             _apiClient = apiClient;
         }
-
 
         public async Task<PostApiResponseDTO> GetByTags(List<string> tags, string sortBy, string direction)
         {
@@ -90,38 +79,5 @@ namespace PostApi.Services
                     posts.Reverse() :
                     posts;
         }
-
-        //private IEnumerable<Post> SortPosts(IEnumerable<Post> posts, SortField sortField, string direction)
-        //{
-        //    switch (sortField)
-        //    {
-        //        case SortField.Reads:
-        //            {
-        //                posts = posts.OrderBy(post => post.Reads);
-        //                break;
-        //            }
-        //        case SortField.Likes:
-        //            {
-        //                posts = posts.OrderBy(post => post.Likes);
-        //                break;
-        //            }
-        //        case SortField.Popularity:
-        //            {
-        //                posts = posts.OrderBy(post => post.Popularity);
-        //                break;
-        //            }
-        //        default:
-        //            {
-        //                posts = posts.OrderBy(post => post.Id);
-        //                break;
-        //            }
-
-        //    }
-
-        //    return direction == "desc" ?
-        //            posts.Reverse() :
-        //            posts;
-        //}
     }
-
 }

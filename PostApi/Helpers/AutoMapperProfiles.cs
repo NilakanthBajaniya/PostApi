@@ -1,5 +1,8 @@
 ﻿using AutoMapper;
+using PostApi.DTOs;
 using PostApi.Models.DTOs;
+using PostApi.Services;
+using PostApi.Services.Utils;
 
 namespace PostApi.Helpers
 {
@@ -8,10 +11,22 @@ namespace PostApi.Helpers
         public AutoMapperProfiles()
         {
             CreateMap<PostApiResponseDTO, PostResponse>()
-            .ForMember(
-                dest => dest.Count,
-                opt => opt.MapFrom(src => src.Posts.Count())
-            );
+                .AfterMap((src, dest) => dest.Meta = new()
+                {
+                    Count = src.Posts.Count(),
+                    SortOptions = new List<string>
+                    {
+                        PostSortFields.Id, 
+                        PostSortFields.Reads, 
+                        PostSortFields.Likes, 
+                        PostSortFields.Popularity,
+                    },
+                    SortDirections = new List<string>
+                    {
+                        SortDirection.Asc,
+                        SortDirection.Desc,
+                    }
+                });
 
         }
     }

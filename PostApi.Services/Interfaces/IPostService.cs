@@ -1,10 +1,8 @@
-﻿
-using PostApi.Models.DTOs;
-using PostsApi.Services.Interfaces;
+﻿using PostApi.Models.DTOs;
 
 namespace PostApi.Services.Interfaces
 {
-    public interface IPostService : IService<PostApiResponseDTO>
+    public interface IPostService
     {
         Task<PostApiResponseDTO> GetByTags(List<string> tags, string sortBy, string direction);
     }
